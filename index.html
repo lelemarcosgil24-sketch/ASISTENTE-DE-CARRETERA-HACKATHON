@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Carretera AFN | Dashboard Operativo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="header-full">
+            <div class="brand">
+                <h1>Asistente de Carretera <span class="brand-sub">| AFN</span></h1>
+            </div>
+            <div class="status-indicator">
+                <span class="status-dot"></span> AGENTE ACTIVO
+            </div>
+        </header>
+
+        <main class="card">
+            <div class="card-header">
+                <h2>Registro de Incidencia</h2>
+            </div>
+            
+            <form action="#" class="op-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="tipo-falla">Tipo de Falla</label>
+                    <select id="tipo-falla">
+                        <option value="motor">Falla de Motor / Arranque</option>
+                        <option value="electrico">Problema Eléctrico</option>
+                        <option value="seguridad">Sistemas de Seguridad / Cámaras</option>
+                        <option value="otro">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ruta">Ruta de Operación</label>
+                    <input type="text" id="ruta" value="Ruta Toluca / Laredo">
+                </div>
+
+                <div class="form-group">
+                    <label for="desc">Descripción Técnica</label>
+                    <textarea id="desc" placeholder="Ej: La unidad no da marcha y el sensor de proximidad no emite señal..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Generar Diagnóstico</button>
+            </form>
+        </main>
+
+        <aside class="card results-section">
+            <div class="card-header">
+                <h2>Diagnóstico del Agente</h2>
+            </div>
+
+            <div class="data-row">
+                <span class="data-label">Clasificación de Incidencia</span>
+                <div class="data-value">Falla de Sistema Crítico</div>
+            </div>
+
+            <div class="data-row">
+                <span class="data-label">Nivel de Prioridad</span>
+                <div>
+                    <span class="badge badge-alta">ALTA</span>
+                </div>
+            </div>
+
+            <div class="data-row">
+                <span class="data-label">Protocolo de Acción Sugerido</span>
+                
+                <div class="action-card">
+                    <span class="icon">01</span> 
+                    <p>Revisar si la unidad da marcha</p>
+                </div>
+                <div class="action-card">
+                    <span class="icon">02</span> 
+                    <p>Revisar si encienden las luces</p>
+                </div>
+                <div class="action-card">
+                    <span class="icon">03</span> 
+                    <p>Revisar si las cámaras están colocadas correctamente</p>
+                </div>
+                <div class="action-card">
+                    <span class="icon">04</span> 
+                    <p>Revisar si no interfiere un objeto con la vista</p>
+                </div>
+                <div class="action-card auto-call">
+                    <span class="icon">⚡</span> 
+                    <p>Llamar a monitoreo. (Acción automática)</p>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+</body> 
+</html>
